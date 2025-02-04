@@ -93,6 +93,7 @@ courses = [ { "CourseNumber" : "DATS 6101",
 
 for course in courses :        
     print(f"{course['CourseNumber']} {course['CourseTitle']} ({course['Year']} {course['Semester']}) - Grade: {course['Grade']}")
+#%%
 
 # Make your printout exactly like this (without the comment sign)
 # 
@@ -152,7 +153,7 @@ for course in courses :
         letter_grade = "F"
 
     print(f"{course['CourseNumber']} {course['CourseTitle']} ({course['Year']} {course['Semester']}) - Letter Grade: {letter_grade}")
-
+#%%
 
 
 
@@ -172,8 +173,7 @@ for course in courses :
 # 
 # You can start the for-loop anyway you like here. 
 
-#%%
-for index, course in courses enumerate(courses, start=1):
+for index, course in enumerate(courses, start=1):
     grade = course["Grade"]
     if grade >= 93:
         letter_grade = "A"
@@ -225,9 +225,8 @@ for index, course in courses enumerate(courses, start=1):
 # You might find something like this useful, especially if you use the remainder property x%7
 # dayofweektuple = ('Sun','Mon','Tue','Wed','Thu','Fri','Sat') # day-of-week-tuple
 
-#%%
-dayofweektuple = ('Sun','Mon','Tue','Wed','Thu','Fri','Sat')
-start_day = 0
+dayofweektuple = ('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat')
+start_day_index = 0  
 for day in range(1, 32):
     day_of_week = dayofweektuple[(start_day_index + day - 1) % 7]
     print(f"{day_of_week} - 2023/1/{day}")
@@ -240,8 +239,6 @@ for day in range(1, 32):
 # (x Hour, x min, x seconds)
 # ----------------------------------------------------------------
 
-x=257364
-#%%
 x = 257364
 hours = x // 3600  
 remaining_seconds = x % 3600  
@@ -254,5 +251,4 @@ print(f"{hours} Hour(s), {minutes} Minute(s), {seconds} Second(s)")
       
 
 
-# =================================================================
-# %%
+ 
